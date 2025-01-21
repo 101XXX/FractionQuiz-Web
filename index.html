@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decimal Equivalent Tester</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; text-align: center; }
+        .fraction { font-size: 24px; margin: 20px; }
+        .keypad button { font-size: 18px; margin: 5px; width: 50px; height: 50px; }
+        .buttons button { font-size: 18px; margin: 10px; padding: 10px 20px; }
+        .checkbox-group { text-align: left; margin: 20px auto; max-width: 300px; }
+        .checkbox-group label { display: block; margin: 5px; }
+    </style>
+</head>
+<body>
+    <h1>Decimal Equivalent Tester</h1>
+    <div class="checkbox-group" id="checkbox-container"></div>
+    <div>
+        <button onclick="startQuiz()">Start Quiz</button>
+    </div>
+    <div class="fraction" id="fraction-display">FRACTION:</div>
+    <input type="text" id="input-field" placeholder="Enter decimal" />
+    <div class="keypad">
+        <button onclick="pressKey('7')">7</button>
+        <button onclick="pressKey('8')">8</button>
+        <button onclick="pressKey('9')">9</button><br />
+        <button onclick="pressKey('4')">4</button>
+        <button onclick="pressKey('5')">5</button>
+        <button onclick="pressKey('6')">6</button><br />
+        <button onclick="pressKey('1')">1</button>
+        <button onclick="pressKey('2')">2</button>
+        <button onclick="pressKey('3')">3</button><br />
+        <button onclick="pressKey('0')">0</button>
+        <button onclick="pressKey('.')">.</button>
+        <button onclick="backspace()">←</button>
+    </div>
+    <div class="buttons">
+        <button onclick="checkAnswer()">Enter</button>
+        <button onclick="showAnswer()">I Don't Know</button>
+        <button onclick="nextQuestion()">Next</button>
+    </div>
+    <script src="quiz.js"></script>
+</body>
+</html>
