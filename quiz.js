@@ -33,7 +33,7 @@ function nextQuestion() {
     if (selectedFractions.length === 0) return;
     const [num, den] = selectedFractions[Math.floor(Math.random() * selectedFractions.length)];
     currentFraction = { num, den };
-    correctDecimal = (num / den).toFixed(3);
+    correctDecimal = num / den; // Calculate the exact decimal value without rounding
     document.getElementById("fraction-display").innerText = `FRACTION: ${num}/${den}`;
     document.getElementById("input-field").value = "";
 }
@@ -50,7 +50,7 @@ function backspace() {
 
 function checkAnswer() {
     const userAnswer = document.getElementById("input-field").value.trim();
-    if (parseFloat(userAnswer) === parseFloat(correctDecimal)) {
+    if (parseFloat(userAnswer) === correctDecimal) {
         alert("Correct!");
         nextQuestion();
     } else {
